@@ -1,0 +1,44 @@
+.contact-filter {
+    width: 300px;
+    margin: 0 auto;
+    @include search-input;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: stretch 1.5s;
+    overflow: hidden;
+
+    .search-icon {}
+
+    input {
+        height: 100%;
+        margin: 0;
+        border: none;
+        background-color: transparent;
+        padding: 10px;
+        color: var(--md-sys-color-on-background);
+
+        &::placeholder {
+            color: var(--md-sys-color-on-background);
+        }
+    }
+}
+
+@keyframes stretch {
+    0% {
+        opacity: 0;
+        padding-inline: 0;
+        max-width: 0;
+    }
+
+    11% {
+        padding-inline: 40px 8px;
+    }
+
+    100% {
+        opacity: 1;
+        padding-inline: 10px;
+        max-width: 500px;
+    }
+}

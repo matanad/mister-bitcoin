@@ -1,0 +1,82 @@
+.app-header {
+    box-shadow: var(--md-sys-color-shadow) 0px 1px 5px;
+
+    main {
+        display: flex;
+        align-items: center;
+        padding-inline: 16px;
+    }
+
+    .logo {
+        svg {
+            fill: var(--md-sys-color-secondary-container);
+
+            .inner-fill {
+                fill: var(--md-sys-color-background);
+            }
+
+        }
+    }
+
+    .rate {
+        margin: 0 auto;
+    }
+
+    .user-img {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+        transition: .35s background-color ease;
+        cursor: pointer;
+
+        &:hover{
+            background-color: var(--md-sys-color-secondary-container);
+        }
+
+        img {
+            border-radius: 50%;
+            width: 38px;
+        }
+    }
+
+    .logo-container {
+        display: flex;
+        gap: 10px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 18px;
+        margin-inline-start: 40px;
+
+        img {
+            margin: 0;
+            padding-right: 40px;
+        }
+    }
+
+    a {
+        padding: 8px 24px;
+        border-radius: 2em;
+        font-size: 14px;
+
+        &:hover {
+            box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 0.2), 0px 2px 2px 0px rgb(0 0 0 / 0.14), 0px 1px 5px 0px rgb(0 0 0 / 0.12);
+        }
+    }
+
+    .router-link-active {
+        color: var(--md-sys-color-on-secondary-container);
+        background-color: var(--md-sys-color-secondary-container);
+
+    }
+}

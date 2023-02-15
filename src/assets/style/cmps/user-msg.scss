@@ -1,0 +1,78 @@
+.user-msg {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    position: fixed;
+    top: 0;
+    left: calc(35%);
+    margin: 25px 0 0 16px;
+    z-index: 100;
+    padding: 8px 16px 8px calc(36px + 16px);
+    border-radius: 2em;
+    animation: .3s popup, .7s stretch-msg .15s;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .icon {
+        z-index: 101;
+        position: absolute;
+        top: 0;
+        left: -1px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--md-sys-color-on-primary);
+        color: var(--md-sys-color-primary);
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+    }
+
+    &.delete {
+        background-color: var(--md-sys-color-error);
+        color: var(--md-sys-color-on-error);
+
+        .icon {
+            background-color: var(--md-sys-color-on-error);
+            color: var(--md-sys-color-error);
+        }
+    }
+
+
+
+}
+
+@keyframes popup {
+    from {
+        transform: translateY(-50px);
+        max-width: 0;
+        padding-inline: 18px;
+    }
+
+    to {
+        transform: translateY(0);
+        max-width: 0;
+        padding-inline: 18px;
+    }
+}
+
+@keyframes stretch-msg {
+    0% {
+        padding-inline: 27px 0;
+        max-width: 0;
+    }
+
+    10% {
+        border-radius: 2em;
+    }
+
+    11% {
+        padding-inline: 40px 8px;
+    }
+
+    100% {
+        padding-inline: calc(36px + 16px) 16px;
+        max-width: 500px;
+        border-radius: 2em;
+    }
+}

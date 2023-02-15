@@ -1,0 +1,47 @@
+.home {
+    padding: 0%0;
+
+    .home-hero {
+        position: relative;
+        padding: 88px 0 0;
+        text-align: center;
+        margin-bottom: 20px;
+
+        .home-hero-img {
+            opacity: .6;
+            z-index: -1;
+            position: absolute;
+            inset: 0;
+            margin-bottom: 11px;
+            width: 100%;
+            background-image: url('../img/hero.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 25% 20%;
+
+        }
+
+        svg * {
+            fill: var(--md-sys-color-inverse-surface);
+        }
+
+        .greeting {
+            padding-bottom: 105px;
+        }
+
+        .subtitle {
+            // padding-bottom: 105px;
+        }
+
+        button {
+            color: $almost-white;
+            border-color: $almost-white;
+
+            &:hover {
+                color: black;
+                background-color: rgba(255, 255, 255, 0.358);
+                border-color: rgba(255, 255, 255, 0.358);
+            }
+        }
+    }
+}
