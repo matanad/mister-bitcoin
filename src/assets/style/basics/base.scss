@@ -95,6 +95,7 @@ a:hover {
 
 
 button {
+    cursor: pointer;
     &.primary {
         @include btn($type: primary);
     }

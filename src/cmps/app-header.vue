@@ -28,6 +28,9 @@
             </nav>
             <ContactFilter v-if="route" />
             <span class="rate" v-if="rate">1₿ = {{ opositeRate }}</span>
+            <button @click="toggleDarkMode" class="material-symbols-outlined" id="dark-mode-toggle">
+                light_mode
+            </button>
             <div class="user-img">
                 <img :src="user.imgUrl" alt="">
             </div>
@@ -39,12 +42,15 @@
 import ContactFilter from './contact-filter.vue'
 import { bitcoinService } from '../services/bitcoin.service';
 import { userService } from '../services/user.service';
+import { themeService } from '../services/theme.service';
+
 export default {
     data() {
         return {
             rate: null,
             user: userService.getUser(),
-            route: false
+            route: false,
+            toggleDarkMode: themeService.toggleDarkMode
         }
     },
     async created() {
@@ -63,6 +69,6 @@ export default {
             this.route = path === '/contact'
         }
     },
-    components: {ContactFilter},
+    components: { ContactFilter },
 }
 </script>
